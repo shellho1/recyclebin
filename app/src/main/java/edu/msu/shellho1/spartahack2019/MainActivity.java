@@ -134,8 +134,9 @@ public class MainActivity extends AppCompatActivity {
     public void onInstruct(View view){
         AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
         builder.setTitle("Info");
-        builder.setMessage("Take a photo of trash you are throwing away and get points!\n" +
-                "Seperate Recyclables by Paper, Organics, Metal, and Plastic");
+        builder.setMessage("Simply take a photo of the trash you are throwing away and " +
+                "Recycle Bin will utilize Google Vision to determine if it is recyclable or not. " +
+                "Earn points for every recyclable item and compete with your friends to score the highest");
         builder.setPositiveButton(android.R.string.ok, null);
 
         AlertDialog alertDialog = builder.create();
