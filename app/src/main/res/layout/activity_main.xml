@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|bottom"
-        android:layout_margin="100dp"
+        android:layout_margin="125dp"
         android:fontFamily="@font/luckiest_guy"
         android:text=""
         android:textAppearance="@color/colorPrimaryDark"
@@ -22,8 +22,8 @@
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_gravity="center_horizontal|bottom"
         android:layout_margin="@dimen/fab_margin"
         android:src="@android:drawable/ic_menu_gallery" />
@@ -36,8 +36,8 @@
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/info_button"
-            android:layout_width="wrap_content"
-            android:layout_height="169dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_gravity="end|bottom"
             android:layout_margin="@dimen/fab_margin"
             android:src="@android:color/transparent"
@@ -61,8 +61,8 @@
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/about_button"
-            android:layout_width="wrap_content"
-            android:layout_height="169dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_gravity="start|bottom"
             android:layout_margin="@dimen/fab_margin"
             android:onClick="onAbout"
