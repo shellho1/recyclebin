@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="edu.msu.shellho1.spartahack2019.MainActivity">
+
+    <include layout="@layout/content_main" />
+
+    <TextView
+        android:id="@+id/highscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAppearance="@color/colorPrimaryDark"
+        android:textSize="48dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_margin="100dp"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@android:drawable/ic_menu_gallery" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:onClick="onInstruct">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/info_button"
+            android:layout_width="wrap_content"
+            android:layout_height="169dp"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@android:color/transparent"
+            app:backgroundTint="@color/colorPrimaryDark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="16dp"
+            android:text="Info"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorWhite" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:onClick="onInstruct">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/about_button"
+            android:layout_width="wrap_content"
+            android:layout_height="169dp"
+            android:layout_gravity="start|bottom"
+            android:layout_margin="@dimen/fab_margin"
+            android:onClick="onAbout"
+            android:src="@android:color/transparent"
+            app:backgroundTint="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="16dp"
+            android:text="About"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorWhite" />
+    </FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>
