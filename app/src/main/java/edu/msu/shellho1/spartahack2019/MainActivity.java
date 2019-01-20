@@ -127,6 +127,8 @@ public class MainActivity extends AppCompatActivity {
 
         mImageDetails = findViewById(R.id.image_details);
         mMainImage = findViewById(R.id.main_image);
+
+        mMainImage.setImageResource(R.mipmap.recycle_logo);
     }
 
     public void onInstruct(View view){
@@ -339,9 +341,12 @@ public class MainActivity extends AppCompatActivity {
 
         protected void onPostExecute(String result) {
             MainActivity activity = mActivityWeakReference.get();
-            if (activity != null && !activity.isFinishing()) {
-                TextView imageDetail = activity.findViewById(R.id.image_details);
-                imageDetail.setText(result);
+            TextView imageDetail = activity.findViewById(R.id.image_details);
+            imageDetail.setText(result);
+            if (activity != null && !activity.isFinishing()  && result.equals("Not recyclable")) {
+                Toast.makeText(activity, "Image detected as not recyclable", Toast.LENGTH_SHORT).show();
+            }
+            else if (activity != null && !activity.isFinishing()) {
                 TextView highscore = activity.findViewById(R.id.highscore);
                 String currScore = "Highscore: " + Integer.toString(score);
                 highscore.setText(currScore);
@@ -395,10 +400,14 @@ public class MainActivity extends AppCompatActivity {
                 if (checkIfTrash(label.getDescription().toLowerCase())) {
                     break;
                 }
+                else if (label.equals(labels.get(labels.size()-1))) {
+                    return "Not recyclable";
+                }
 
             }
         } else {
-            message.append("nothing");
+            // No object detected
+            return "Not recyclable";
         }
 
         return "Recyclable object detected. Thank you for recycling!";
